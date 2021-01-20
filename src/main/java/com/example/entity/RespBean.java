@@ -7,12 +7,13 @@ import lombok.NoArgsConstructor;
 /**
  * 公共返回对象
  *
- * @author zhoubin
- * @since 1.0.0
+ * @author Hugo
+ * @since 2020-1-13
  */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class RespBean {
 
 	private Integer code;

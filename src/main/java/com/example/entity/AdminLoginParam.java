@@ -1,5 +1,6 @@
 package com.example.entity;
 
+import com.gitee.sunchenbin.mybatis.actable.annotation.Table;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -9,13 +10,14 @@ import lombok.experimental.Accessors;
 /**
  * 登录实体类
  *
- * @author zhoubin
+ * @author Hugo
  * @since 1.0.0
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @ApiModel(value = "登录实体类", description = "")
+
 public class AdminLoginParam {
     @ApiModelProperty(value = "用户名", required = true)
     private String username;

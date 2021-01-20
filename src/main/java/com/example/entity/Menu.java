@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.gitee.sunchenbin.mybatis.actable.annotation.Table;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -18,14 +19,15 @@ import java.util.List;
  *
  * </p>
  *
- * @author zhoubin
- * @since 2020-07-17
+ * @author Hugo
+ * @since 2020-1-13
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("t_menu")
 @ApiModel(value = "Menu对象", description = "")
+@Table (isSimple = true)
 public class Menu implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -61,13 +63,13 @@ public class Menu implements Serializable {
 	@ApiModelProperty(value = "是否启用")
 	private Boolean enabled;
 
-	@ApiModelProperty(value = "子菜单")
-	@TableField(exist = false)
-	private List<Menu> children;
-
-	@ApiModelProperty(value = "角色")
-	@TableField(exist = false)
-	private List<Role> roles;
+//	@ApiModelProperty(value = "子菜单")
+//	@TableField(exist = false)
+//	private List<Menu> children;
+//
+//	@ApiModelProperty(value = "角色")
+//	@TableField(exist = false)
+//	private List<Role> roles;
 
 
 }

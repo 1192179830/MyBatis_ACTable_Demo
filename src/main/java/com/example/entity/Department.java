@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.gitee.sunchenbin.mybatis.actable.annotation.Table;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -18,14 +19,15 @@ import java.util.List;
  *
  * </p>
  *
- * @author zhoubin
- * @since 2020-07-17
+ * @author Hugo
+ * @since 2020-1-13
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("t_department")
 @ApiModel(value = "Department对象", description = "")
+@Table (isSimple = true)
 public class Department implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -49,9 +51,9 @@ public class Department implements Serializable {
     @ApiModelProperty(value = "是否上级")
     private Boolean isParent;
 
-    @ApiModelProperty(value = "子部门")
-    @TableField(exist = false)
-    private List<Department> children;
+//    @ApiModelProperty(value = "子部门")
+//    @TableField(exist = false)
+//    private List<Department> children;
 
     public static long getSerialVersionUID() {
         return serialVersionUID;

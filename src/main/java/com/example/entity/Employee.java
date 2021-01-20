@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.gitee.sunchenbin.mybatis.actable.annotation.Table;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -18,14 +19,15 @@ import java.time.LocalDate;
  *
  * </p>
  *
- * @author zhoubin
- * @since 2020-07-17
+ * @author Hugo
+ * @since 2020-1-13
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("t_employee")
 @ApiModel(value = "Employee对象", description = "")
+@Table (isSimple = true)
 public class Employee implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -119,25 +121,25 @@ public class Employee implements Serializable {
     private Integer salaryId;
 
 
-    @ApiModelProperty(value = "民族")
-    @TableField(exist = false)
-    private Nation nation;
+//    @ApiModelProperty(value = "民族")
+//    @TableField(exist = false)
+//    private Nation nation;
 
-    @TableField(exist = false)
-    @ApiModelProperty(value = "政治面貌")
-    private PoliticsStatus politicsStatus;
-
-    @TableField(exist = false)
-    @ApiModelProperty(value = "职称名称")
-    private Joblevel joblevel;
-
-    @TableField(exist = false)
-    @ApiModelProperty(value = "职位")
-    private Position position;
-
-    @TableField(exist = false)
-    @ApiModelProperty(value = "部门名称")
-    private Department department;
+//    @TableField(exist = false)
+//    @ApiModelProperty(value = "政治面貌")
+//    private PoliticsStatus politicsStatus;
+//
+//    @TableField(exist = false)
+//    @ApiModelProperty(value = "职称名称")
+//    private Joblevel joblevel;
+//
+//    @TableField(exist = false)
+//    @ApiModelProperty(value = "职位")
+//    private Position position;
+//
+//    @TableField(exist = false)
+//    @ApiModelProperty(value = "部门名称")
+//    private Department department;
 
 
 }

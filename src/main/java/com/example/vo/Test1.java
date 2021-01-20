@@ -20,7 +20,6 @@ import java.util.Date;
  */
 @Table(name = "test1")
 public class Test1 extends BaseModel {
-
     @Id
     @IsAutoIncrement
     @Column

@@ -3,6 +3,7 @@ package com.example.entity;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.gitee.sunchenbin.mybatis.actable.annotation.Table;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -17,14 +18,15 @@ import java.time.LocalDateTime;
  *
  * </p>
  *
- * @author zhoubin
- * @since 2020-07-17
+ * @author Hugo
+ * @since 2020-1-13
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName("t_joblevel")
 @ApiModel(value = "Joblevel对象", description = "")
+@Table (isSimple = true)
 public class Joblevel implements Serializable {
 
     private static final long serialVersionUID = 1L;
